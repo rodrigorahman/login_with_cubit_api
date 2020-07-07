@@ -1,21 +1,16 @@
-# login_with_bloc_api
-
-## Running the Application Locally
-
-Run `aqueduct serve` from this directory to run the application. For running within an IDE, run `bin/main.dart`. By default, a configuration file named `config.yaml` will be used.
-
-To generate a SwaggerUI client, run `aqueduct document client`.
-
-## Running Application Tests
-
-To run all tests for this application, run the following in this directory:
-
-```
-pub run test
+## SQL 
+```sql
+create table user_system (
+	user_id int primary key not null auto_increment,
+    user_login varchar(200) not null,
+    user_password text not null
+);
 ```
 
-The default configuration file used when testing is `config.src.yaml`. This file should be checked into version control. It also the template for configuration files used in deployment.
+## Script para inserir o usuário: 
 
-## Deploying an Application
+**Senha do usuário:** rodrigo123
 
-See the documentation for [Deployment](https://aqueduct.io/docs/deploy/).
+```sql
+INSERT INTO `login_with_bloc`.`user_system` (`user_login`, `user_password`) VALUES ('rodrigo', '223e781527acd14b15c77fae54091c1c6cfd0e577dab0a8a9d88c551173373cf');
+```
